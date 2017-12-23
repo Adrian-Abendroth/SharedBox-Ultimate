@@ -101,8 +101,5 @@ public class Benutzer {
 		 this.werbung = werbung;
 	 }
 	 
-
-
-	
 	
 }

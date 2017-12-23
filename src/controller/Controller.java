@@ -1,7 +1,6 @@
 package controller;
 
 import javax.swing.JOptionPane;
-
 import model.Model;
 import view.View;
 

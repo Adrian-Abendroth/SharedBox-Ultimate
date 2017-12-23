@@ -11,6 +11,7 @@ import javax.swing.SwingConstants;
  
 public class View {
  
+	
  // View uses Swing framework to display UI to user
  private JFrame frame;
  private JLabel firstnameLabel;
