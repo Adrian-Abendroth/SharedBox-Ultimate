@@ -12,6 +12,8 @@ public class LoginMain {
 	   benutzerObjekt.setPasswort("ola");
 	   System.out.println(benutzerObjekt.getPasswort());
 	   
+	   
+	   
 	}
 
 }
