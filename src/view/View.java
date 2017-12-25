@@ -14,14 +14,12 @@ public class View {
 	
  // View uses Swing framework to display UI to user
  private JFrame frame;
- private JLabel firstnameLabel;
- private JLabel lastnameLabel;
- private JTextField firstnameTextfield;
- private JTextField lastnameTextfield;
- private JButton firstnameSaveButton;
- private JButton lastnameSaveButton;
- private JButton hello;
- private JButton bye;
+ private JLabel emailLabel;
+ private JLabel passwortLabel;
+ private JTextField emailTextfield;
+ private JTextField passwortTextfield;
+ private JButton verifyLoginButton;
+ private JButton end;
  
  public View(String title) {
   frame = new JFrame(title);
@@ -32,36 +30,31 @@ public class View {
   frame.setVisible(true);
  
   // Create UI elements
-  firstnameLabel = new JLabel("Firstname :");
-  lastnameLabel = new JLabel("Lastname :");
-  firstnameTextfield = new JTextField();
-  lastnameTextfield = new JTextField();
-  firstnameSaveButton = new JButton("Save firstname");
-  lastnameSaveButton = new JButton("Save lastname");
-  hello = new JButton("Hello!");
-  bye = new JButton("Bye!");
+  emailLabel = new JLabel("E-Mail :");
+  passwortLabel = new JLabel("Passwort :");
+  emailTextfield = new JTextField();
+  passwortTextfield = new JTextField();
+  verifyLoginButton = new JButton("Einloggen");
+  end = new JButton("Beenden!");
  
   // Add UI element to frame
   GroupLayout layout = new GroupLayout(frame.getContentPane());
   layout.setAutoCreateGaps(true);
   layout.setAutoCreateContainerGaps(true);
   layout.setHorizontalGroup(layout.createSequentialGroup()
-    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(firstnameLabel)
-    .addComponent(lastnameLabel))
-    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(firstnameTextfield)
-    .addComponent(lastnameTextfield))
-    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(firstnameSaveButton)
-    .addComponent(lastnameSaveButton))
-    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(hello)
-    .addComponent(bye)));
+    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(emailLabel)
+    .addComponent(passwortLabel))
+    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(emailTextfield)
+    .addComponent(passwortTextfield))
+    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(verifyLoginButton).addComponent(end)));
   layout.setVerticalGroup(layout.createSequentialGroup()
-    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(firstnameLabel)
-    .addComponent(firstnameTextfield).addComponent(firstnameSaveButton).addComponent(hello))
-    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(lastnameLabel)
-    .addComponent(lastnameTextfield).addComponent(lastnameSaveButton).addComponent(bye)));
+    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(emailLabel)
+    .addComponent(emailTextfield).addComponent(verifyLoginButton))
+    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(passwortLabel)
+    .addComponent(passwortTextfield).addComponent(end)));
  
-  layout.linkSize(SwingConstants.HORIZONTAL, firstnameSaveButton, lastnameSaveButton);
-  layout.linkSize(SwingConstants.HORIZONTAL, hello, bye);
+  layout.linkSize(SwingConstants.HORIZONTAL, verifyLoginButton);
+  layout.linkSize(SwingConstants.HORIZONTAL, end);
   frame.getContentPane().setLayout(layout);
  }
  
@@ -73,68 +66,53 @@ public class View {
   this.frame = frame;
  }
  
- public JLabel getFirstnameLabel() {
-  return firstnameLabel;
+ public JLabel getemailLabel() {
+  return emailLabel;
  }
  
- public void setFirstnameLabel(JLabel firstnameLabel) {
-  this.firstnameLabel = firstnameLabel;
+ public void setemailLabel(JLabel emailLabel) {
+  this.emailLabel = emailLabel;
  }
  
- public JLabel getLastnameLabel() {
-  return lastnameLabel;
+ public JLabel getpasswortLabel() {
+  return passwortLabel;
  }
  
- public void setLastnameLabel(JLabel lastnameLabel) {
-  this.lastnameLabel = lastnameLabel;
+ public void setpasswortLabel(JLabel passwortLabel) {
+  this.passwortLabel = passwortLabel;
  }
  
- public JTextField getFirstnameTextfield() {
-  return firstnameTextfield;
+ public JTextField getemailTextfield() {
+  return emailTextfield;
  }
  
- public void setFirstnameTextfield(JTextField firstnameTextfield) {
-  this.firstnameTextfield = firstnameTextfield;
+ public void setemailTextfield(JTextField emailTextfield) {
+  this.emailTextfield = emailTextfield;
  }
  
- public JTextField getLastnameTextfield() {
-  return lastnameTextfield;
+ public JTextField getpasswortTextfield() {
+  return passwortTextfield;
  }
  
- public void setLastnameTextfield(JTextField lastnameTextfield) {
-  this.lastnameTextfield = lastnameTextfield;
+ public void setpasswortTextfield(JTextField passwortTextfield) {
+  this.passwortTextfield = passwortTextfield;
  }
  
- public JButton getFirstnameSaveButton() {
-  return firstnameSaveButton;
+ public JButton getverifyLoginButton() {
+  return verifyLoginButton;
  }
  
- public void setFirstnameSaveButton(JButton firstnameSaveButton) {
-  this.firstnameSaveButton = firstnameSaveButton;
+ public void setverifyLoginButton(JButton verifyLoginButton) {
+  this.verifyLoginButton = verifyLoginButton;
  }
  
- public JButton getLastnameSaveButton() {
-  return lastnameSaveButton;
+ 
+ public JButton getend() {
+  return end;
  }
  
- public void setLastnameSaveButton(JButton lastnameSaveButton) {
-  this.lastnameSaveButton = lastnameSaveButton;
- }
- 
- public JButton getHello() {
-  return hello;
- }
- 
- public void setHello(JButton hello) {
-  this.hello = hello;
- }
- 
- public JButton getBye() {
-  return bye;
- }
- 
- public void setBye(JButton bye) {
-  this.bye = bye;
+ public void setend(JButton end) {
+  this.end = end;
  }
  
 }

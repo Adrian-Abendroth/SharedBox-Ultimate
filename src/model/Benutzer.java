@@ -12,13 +12,18 @@ public class Benutzer {
 	
 	// methods
 	
-	 public static boolean Authenticate(String username, String password) {
-	        // hardcoded username and password
-	        if (username.equals("Adrian") && password.equals("1337")) {
-	            return true;
-	        }
-	        return false;
-	    }
+	public Benutzer(String email, String passwort) {
+		this.email = email;
+		this.passwort = passwort;
+	 }
+	
+	public static boolean Authenticate(String username, String password) {
+        // hardcoded username and password
+        if (username.equals("Max@Mustermann.de") && password.equals("12345")) {
+            return true;
+        }
+        return false;
+    }
 	 
 	 /******* Getter ******* /
 	 
@@ -39,7 +44,7 @@ public class Benutzer {
 	 /**
 	  * @return email
 	  */
-	 public String getemail() {
+	 public String getEmail() {
 		 return email;
 	 }
 	 

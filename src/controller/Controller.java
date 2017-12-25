@@ -16,32 +16,34 @@ public class Controller {
  }
  
  public void initView() {
-  view.getFirstnameTextfield().setText(model.getFirstname());
-  view.getLastnameTextfield().setText(model.getLastname());
+  view.getemailTextfield().setText(model.getemail());
+  view.getpasswortTextfield().setText(model.getpasswort());
  }
  
  public void initController() {
-  view.getFirstnameSaveButton().addActionListener(e -> saveFirstname());
-  view.getLastnameSaveButton().addActionListener(e -> saveLastname());
-  view.getHello().addActionListener(e -> sayHello());
-  view.getBye().addActionListener(e -> sayBye());
+  view.getverifyLoginButton().addActionListener(e -> checkLogin());
+  view.getend().addActionListener(e -> sayend());
+ }
+  
+ private void checkLogin() {
+	 String username = view.getemailTextfield().getText();
+	 String passwort = view.getpasswortTextfield().getText();
+	 boolean test = Model.Authenticate(username, passwort);
+	 /* Wenn der Benutzer und das Passwort uebereinstimmen, loge ein 
+	  * und gehe zur App. Wenn Benutzer und Passwort falsch, dann 
+	  * gebe Fehlermeldung aus
+	 */
+	 if (test == true){
+		 System.out.println("Sie werden eingeloggt");
+	 }
+	 else {
+		 System.out.println("Falscher Benutzername oder Passwort");
+		 
+	 }
  }
  
- private void saveFirstname() {
-  model.setFirstname(view.getFirstnameTextfield().getText());
-  JOptionPane.showMessageDialog(null, "Firstname saved : " + model.getFirstname(), "Info", JOptionPane.INFORMATION_MESSAGE);
- }
  
- private void saveLastname() {
-  model.setLastname(view.getLastnameTextfield().getText());
-  JOptionPane.showMessageDialog(null, "Lastname saved : " + model.getLastname(), "Info", JOptionPane.INFORMATION_MESSAGE);
- }
- 
- private void sayHello() {
-  JOptionPane.showMessageDialog(null, "Hello " + model.getFirstname() + " " + model.getLastname(), "Info", JOptionPane.INFORMATION_MESSAGE);
- }
- 
- private void sayBye() {
+ private void sayend() {
   System.exit(0);
  }
  

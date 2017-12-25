@@ -1,28 +1,44 @@
 package model;
 public class Model {
 	 
-	 private String firstname;
-	 private String lastname;
-	 
-	 public Model(String firstname, String lastname) {
-	  this.firstname = firstname;
-	  this.lastname = lastname;
+	// attributs 
+	protected String nachname;
+	protected String vorname;
+	protected String email;
+	protected String passwort;
+	protected String geschlecht;
+	protected int speicherplatz;
+	protected boolean werbung;
+	
+	// methods 
+	public Model(String email, String passwort) {
+		this.email = email;
+		this.passwort = passwort;
 	 }
 	 
-	 public String getFirstname() {
-	  return firstname;
+	 public static boolean Authenticate(String username, String password) {
+	        // hardcoded username and password
+	        if (username.equals("Max@Mustermann.de") && password.equals("12345")) {
+	            return true;
+	        }
+	        return false;
+	    }
+	 
+	 /******* Getter ******* */
+	 public String getemail() {
+	  return email;
 	 }
 	 
-	 public void setFirstname(String firstname) {
-	  this.firstname = firstname;
+	 public void setemail(String email) {
+	  this.email = email;
 	 }
 	 
-	 public String getLastname() {
-	  return lastname;
+	 public String getpasswort() {
+	  return passwort;
 	 }
 	 
-	 public void setLastname(String lastname) {
-	  this.lastname = lastname;
+	 public void setpasswort(String passwort) {
+	  this.passwort = passwort;
 	 }
 	 
 	}
