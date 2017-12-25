@@ -1,7 +1,8 @@
+// imports packages
 package model;
 
 public class Benutzer {
-	// attributs 
+	/* **** attributs **** */
 	protected String nachname;
 	protected String vorname;
 	protected String email;
@@ -10,7 +11,8 @@ public class Benutzer {
 	protected int speicherplatz;
 	protected boolean werbung;
 	
-	// methods
+	/* **** methods **** */
+	
 	
 	public Benutzer(String email, String passwort) {
 		this.email = email;
@@ -25,7 +27,7 @@ public class Benutzer {
         return false;
     }
 	 
-	 /******* Getter ******* /
+	 /* ***** Getter ***** */
 	 
 	 /**
 	  * @return nachname
@@ -76,7 +78,7 @@ public class Benutzer {
 		 return werbung;
 	 }
 	 
-	 /******* Getter *******/
+	 /* ***** Setter ***** */
 	 
 	 public void setNachname(String name) {
 		 this.nachname = name;
@@ -106,5 +108,4 @@ public class Benutzer {
 		 this.werbung = werbung;
 	 }
 	 
-	
 }
