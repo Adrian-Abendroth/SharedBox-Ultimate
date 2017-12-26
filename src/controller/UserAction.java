@@ -36,12 +36,12 @@ public class UserAction {
 	 String passwort = view.getPasswortTextfield().getText();
 	 boolean test = Benutzer.Authenticate(username, passwort);
 	 /* Wenn der Benutzer und das Passwort uebereinstimmen, loge ein 
-	  * und gehe zur App. Wenn Benutzer und Passwort falsch, dann 
+	  * und gehe zur Main View, schließe dabei das Login-Fenster. Wenn Benutzer und Passwort falsch, dann 
 	  * gebe Fehlermeldung aus
 	 */
 	 if (test == true){
 		 System.out.println("Sie werden eingeloggt");
-	
+		 new MainView("MainView");
 	 }
 	 else {
 		 System.out.println("Falscher Benutzername oder Passwort");

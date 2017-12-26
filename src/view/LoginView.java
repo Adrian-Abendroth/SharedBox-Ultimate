@@ -8,7 +8,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
- 
+
 /* LoginView is a Swing-Component for the Graphical UserInterface */
 public class LoginView {
  
@@ -58,7 +58,8 @@ public class LoginView {
 	  frame.getContentPane().setLayout(layout);
 	 }
 	 
-	 /* ***** Getter ***** */
+
+	/* ***** Getter ***** */
 	 public JFrame getFrame() {
 	  return frame;
 	 }

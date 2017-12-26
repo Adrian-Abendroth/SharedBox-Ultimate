@@ -1,5 +1,7 @@
 package controller;
 
+import java.awt.event.ActionEvent;
+
 import javax.swing.JOptionPane;
 import model.Model;
 import view.View;
@@ -41,8 +43,7 @@ public class Controller {
 		 
 	 }
  }
- 
- 
+
  private void sayend() {
   System.exit(0);
  }
