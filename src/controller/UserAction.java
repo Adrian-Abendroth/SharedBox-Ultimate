@@ -5,7 +5,7 @@ import java.awt.BorderLayout;
 import java.awt.GraphicsConfiguration;
 
 import javax.swing.JFrame;
-
+import javax.swing.JOptionPane;
 import model.Benutzer;
 import view.LoginView;
 import view.MainView;
@@ -14,11 +14,13 @@ public class UserAction {
  /* **** attributs **** */
 	 private Benutzer model;
 	 private LoginView view;
+	 
  
  public UserAction(Benutzer m, LoginView v) {
   model = m;
   view = v;
   initView();
+  
  }
  
  public void initView() {
@@ -45,6 +47,7 @@ public class UserAction {
 	 }
 	 else {
 		 System.out.println("Falscher Benutzername oder Passwort");
+		 JOptionPane.showMessageDialog(null, "Falscher Benutzername oder Passwort");
 		 
 	 }
  }
