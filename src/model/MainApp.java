@@ -3,7 +3,7 @@ package model;
 
 import controller.UserAction;
 import view.LoginView;
-import view.MainView;
+
 
 /*  MainApp where main-programm is started to assemble app */
 public class MainApp {
